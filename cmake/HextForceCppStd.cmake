@@ -1,0 +1,12 @@
+include(CheckCXXCompilerFlag)
+include(HextCompilerIsClangOrGcc)
+if(HEXT_COMPILER_IS_CLANG_OR_GCC)
+  check_cxx_compiler_flag("-std=c++1z" COMPILER_SUPPORTS_CPP1Z)
+  if(COMPILER_SUPPORTS_CPP1Z)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z")
+  else()
+    message(SEND_ERROR "${CMAKE_CXX_COMPILER} does not support the flag -std=c++1z.")
+    message(FATAL_ERROR "C++1z is required.")
+  endif()
+endif()
+
