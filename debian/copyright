@@ -1,0 +1,14 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: hext
+Upstream-Contact: Thomas Trapp <debian@thomastrapp.com>
+Source: https://github.com/html-extract/hext
+License: Apache-2.0
+Copyright: 2019 Thomas Trapp
+
+Files: *
+Copyright: 2019 Thomas Trapp
+License: Apache-2.0
+
+License: Apache-2.0
+ On Debian systems the full text of the Apache-2.0 license can be found in the
+ `/usr/share/common-licenses/Apache-2.0' file.

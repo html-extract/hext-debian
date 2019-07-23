@@ -1,0 +1,3 @@
+usr/include/hext/*
+usr/lib/*/libhext.so
+usr/lib/cmake/hext/*

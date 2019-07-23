@@ -1,0 +1,4 @@
+version=4
+opts=filenamemangle=s/.+\/v?(\d\S+)\.tar\.gz/hext-$1\.tar\.gz/,\
+pgpsigurlmangle=s/archive\/v(\d\S+)\.tar\.gz/releases\/download\/v$1\/v$1\.tar\.gz\.asc/ \
+  https://github.com/html-extract/hext/releases .*/v(\d+\.\d+\.\d+)\.tar\.gz

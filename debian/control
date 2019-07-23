@@ -1,0 +1,64 @@
+Source: hext
+Section: utils
+Priority: optional
+Maintainer: Thomas Trapp <debian@thomastrapp.com>
+Build-Depends: cmake,
+               debhelper (>=11~),
+               googletest,
+               libboost-dev,
+               libboost-program-options-dev,
+               libboost-regex-dev,
+               libgtest-dev,
+               libgumbo-dev,
+               ragel,
+               rapidjson-dev
+Standards-Version: 4.3.0
+Homepage: https://hext.thomastrapp.com/
+Vcs-Browser: https://github.com/html-extract/hext-debian
+Vcs-Git: https://github.com/html-extract/hext-debian.git
+
+Package: hext
+Architecture: any
+Depends: htmlext, ${misc:Depends}
+Description: DSL for HTML content extraction
+ Hext is a domain-specific language for extracting
+ structured data from HTML documents.
+ .
+ This dummy package provides htmlext and libhext.
+
+Package: htmlext
+Section: utils
+Architecture: any
+Multi-Arch: foreign
+Depends: libhext0.8 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Description: DSL for HTML content extraction - command-line utility
+ The htmlext command-line utility applies Hext to
+ HTML and outputs JSON.
+ Hext is a domain-specific language for extracting
+ structured data from HTML documents.
+
+Package: libhext0.8
+Section: libs
+Architecture: any
+Multi-Arch: same
+Recommends: htmlext (= ${binary:Version})
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: DSL for HTML content extraction - shared C++ library
+ libhext is the C++ library that powers Hext.
+ Hext is a domain-specific language for extracting
+ structured data from HTML documents.
+ .
+ This package provides the shared library.
+
+Package: libhext-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libhext0.8 (= ${binary:Version}), ${misc:Depends}
+Description: DSL for HTML content extraction - development files
+ libhext is the C++ library that powers Hext.
+ Hext is a domain-specific language for extracting
+ structured data from HTML documents.
+ .
+ This package provides the headers needed by developers.

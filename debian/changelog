@@ -1,0 +1,5 @@
+hext (0.8.2-1) UNRELEASED; urgency=low
+
+  * Initial release. Closes: #nnnn
+
+ -- Thomas Trapp <debian@thomastrapp.com>  Tue, 23 Jul 2019 20:53:53 +0000

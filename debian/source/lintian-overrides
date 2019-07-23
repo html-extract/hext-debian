@@ -1,0 +1,3 @@
+# This license file includes the "evil json" license, but the affected files
+# are not included in upstream.
+hext source: license-problem-json-evil scripts/build-hext-python/assets/rapidjson.license

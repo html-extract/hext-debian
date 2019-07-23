@@ -1,0 +1,4 @@
+Test-Command: ./test/blackbox.sh ./test/case/*hext
+
+Test-Command: bats ./test/bats/htmlext.bats
+Depends: bats, @
